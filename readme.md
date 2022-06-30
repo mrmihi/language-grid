@@ -1,5 +1,7 @@
 ### All logos are taken from https://github.com/abrahamcalf/programming-languages-logos
 
+https://github.com/abrahamcalf/programming-languages-logos => README
+
 ### Credits
 
 Mainly inspired by [Browser logos](https://github.com/alrra/browser-logos/). I would be imposible
