@@ -1,0 +1,149 @@
+body{
+    background-color: black;
+}
+#logo-grid{
+    display: grid;
+    gap: 1rem;
+
+    grid-template-areas:
+    'a b c d'
+    'l p p e'
+    'k p p f'
+    'j i h g';
+
+    grid-template-columns: 128px auto auto 128px;
+    grid-template-rows:repeat(4,128px);
+
+    --stagger-delay: 100ms;
+}
+
+@keyframes card-animation {
+    from{
+            opacity: 0;
+            transform:scale(0.3);     
+    }
+    to{
+            opacity: 1;
+            transform:scale(1);
+    }
+}
+
+.card{
+    background-color: #1A1A40;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: card-animation 1000ms ease-out;
+    animation-fill-mode: backwards;  
+}
+.card:nth-child(1){
+    grid-area: a ;
+    animation-delay: calc( 1* var(--stagger-delay));
+}
+
+.card:nth-child(2){
+    grid-area: b ;
+    animation-delay: calc( 2* var(--stagger-delay));
+}
+
+.card:nth-child(3){
+    grid-area: c ;
+    animation-delay: calc( 3* var(--stagger-delay));
+}
+
+.card:nth-child(4){
+    grid-area: d ;
+    animation-delay: calc( 4* var(--stagger-delay));
+}
+
+.card:nth-child(5){
+    grid-area: e ;
+    animation-delay: calc( 5* var(--stagger-delay));
+}
+
+.card:nth-child(6){
+    grid-area: f ;
+    animation-delay: calc( 6* var(--stagger-delay));
+}
+
+.card:nth-child(7){
+    grid-area: g ;
+    animation-delay: calc( 7* var(--stagger-delay));
+}
+
+.card:nth-child(8){
+    grid-area: h ;
+    animation-delay: calc( 8* var(--stagger-delay));
+}
+
+.card:nth-child(9){
+    grid-area: i ;
+    animation-delay: calc( 9* var(--stagger-delay));
+}
+
+.card:nth-child(10){
+    grid-area: j ;
+    animation-delay: calc( 10* var(--stagger-delay));
+}
+
+.card:nth-child(11){
+    grid-area: k ;
+    animation-delay: calc( 11* var(--stagger-delay));
+}
+
+.card:nth-child(12){
+    grid-area: l ;
+    animation-delay: calc( 12* var(--stagger-delay));
+}
+
+.card:last-child{
+
+    grid-area: p ;
+    animation-delay: calc( 16* var(--stagger-delay));
+}
+
+.table{
+    border: 1px solid white;
+    border-collapse: collapse;
+    margin:auto;
+}
+
+.table tr{
+    border: 1px solid white;
+}
+
+.table td{
+    border: 1px solid white;
+    padding: 2vh 2vw;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .modal-content {
+    color: white;
+    font-family: monospace;
+    background-color: #000000;
+    margin: 40vh auto;
+    padding: 5vh 5vw;
+    border: 1px solid #888;
+    width: 80%;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
